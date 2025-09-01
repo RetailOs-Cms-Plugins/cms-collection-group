@@ -41,17 +41,8 @@ export const CollectionGroup: CollectionConfig = {
       required: true,
       validate: (
         value: null | string | string[] | undefined,
-        { data, operation }: { data: any; operation?: string },
+        { data }: { data: any;},
       ) => {
-        console.log('value', value)
-        console.log('data', data)
-        console.log('operation', operation)
-        // Skip validation on create operation
-        if (operation === 'create') {
-          return true
-        }
-        console.log(data?.collectionItems[0].relationTo)
-        console.log(data?.selectedCollection)
         // If trying to change collection type and there are items selected
         if (
           data?.selectedCollection !== data?.collectionItems[0].relationTo &&
@@ -95,15 +86,4 @@ export const CollectionGroup: CollectionConfig = {
       },
     },
   ],
-  // hooks: {
-  //   beforeChange: [
-  //     ({ data, originalDoc }) => {
-  //       // If selectedCollection changed, clear collectionItems
-  //       if (originalDoc && data.selectedCollection !== originalDoc.selectedCollection) {
-  //         data.collectionItems = []
-  //       }
-  //       return data
-  //     },
-  //   ],
-  // },
 }

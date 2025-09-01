@@ -1,5 +1,5 @@
 {
-  "name": "@retailos-ai/plugin-template",
+  "name": "@retailos-ai/cms-collection-group-plugin",
   "version": "1.6.1",
   "description": "A blank template to get started with Payload 3.0",
   "license": "MIT",

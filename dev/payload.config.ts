@@ -5,6 +5,7 @@ import { buildConfig } from 'payload'
 import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 
+import { collectionGroupPlugin } from '../src/index.js'
 import { devUser } from './helpers/credentials.js'
 import { testEmailAdapter } from './helpers/testEmailAdapter.js'
 import { seed } from './seed.js'
@@ -46,7 +47,7 @@ export default buildConfig({
   onInit: async (payload) => {
     await seed(payload)
   },
-  plugins: [],
+  plugins: [collectionGroupPlugin],
   secret: process.env.PAYLOAD_SECRET || 'test-secret_key',
   sharp,
   typescript: {

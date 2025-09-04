@@ -1,5 +1,11 @@
 # @retailos-ai/plugin-template
 
+## 1.7.0
+
+### Minor Changes
+
+- f43b647: first version upload of this collection group plugin
+
 ## 1.6.1
 
 ### Patch Changes

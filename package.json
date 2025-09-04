@@ -24,7 +24,7 @@
     }
   },
   "publishConfig": {
-    "access": "restricted",
+    "access": "public",
     "exports": {
       ".": {
         "import": "./dist/index.js",

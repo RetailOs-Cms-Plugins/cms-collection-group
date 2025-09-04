@@ -2,6 +2,15 @@
   "name": "@retailos-ai/cms-collection-group-plugin",
   "version": "1.7.0",
   "description": "A blank template to get started with Payload 3.0",
+  "publishConfig": { "access": "public" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RetailOs-Cms-Plugins/cms-collection-group"
+  },
+  "bugs": {
+    "url": "https://github.com/RetailOs-Cms-Plugins/cms-collection-group/issues"
+  },
+  "homepage": "https://github.com/RetailOs-Cms-Plugins/cms-collection-group#readme",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -21,26 +30,6 @@
       "import": "./dist/exports/rsc.js",
       "types": "./dist/exports/rsc.d.ts",
       "default": "./dist/exports/rsc.js"
-    }
-  },
-  "publishConfig": {
-    "access": "public",
-    "exports": {
-      ".": {
-        "import": "./dist/index.js",
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
-      "./client": {
-        "import": "./dist/exports/client.js",
-        "types": "./dist/exports/client.d.ts",
-        "default": "./dist/exports/client.js"
-      },
-      "./rsc": {
-        "import": "./dist/exports/rsc.js",
-        "types": "./dist/exports/rsc.d.ts",
-        "default": "./dist/exports/rsc.js"
-      }
     }
   },
   "files": [

@@ -1,6 +1,6 @@
 {
   "name": "@retailos-ai/cms-collection-group-plugin",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "A plugin for Payload CMS to create collection groups",
   "keywords": [
     "payload",
@@ -9,7 +9,9 @@
     "collection-groups",
     "collection"
   ],
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/RetailOs-Cms-Plugins/cms-collection-group"

@@ -1,5 +1,11 @@
 # @retailos-ai/plugin-template
 
+## 1.7.1
+
+### Patch Changes
+
+- 399e4bf: added enumName key to select field
+
 ## 1.7.0
 
 ### Minor Changes

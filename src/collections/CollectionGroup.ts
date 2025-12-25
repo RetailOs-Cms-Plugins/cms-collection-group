@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-import { shouldShowCollectionItems, validateCollectionTypeChange } from "../utils/ConfigUtils.js"
+import { shouldShowCollectionItems, validateCollectionTypeChange } from '../utils/ConfigUtils.js'
 
 export const createCollectionGroup = (existingCollections: string[]): CollectionConfig => {
   const collectionOptions = existingCollections.map((slug) => ({
@@ -38,8 +38,9 @@ export const createCollectionGroup = (existingCollections: string[]): Collection
         admin: {
           description: 'Choose which collection to select items from',
         },
+        enumName: 'collection_group_selected_collection',
         label: 'Collection Type',
-        options: collectionOptions, 
+        options: collectionOptions,
         required: true,
         validate: validateCollectionTypeChange,
       },
@@ -51,14 +52,14 @@ export const createCollectionGroup = (existingCollections: string[]): Collection
           description: 'Select items from the chosen collection',
         },
         filterOptions: ({ relationTo, siblingData }) => {
-      if (!(siblingData as { selectedCollection?: string })?.selectedCollection) {
-          return false
-        }
-        return relationTo === (siblingData as { selectedCollection?: string })?.selectedCollection
+          if (!(siblingData as { selectedCollection?: string })?.selectedCollection) {
+            return false
+          }
+          return relationTo === (siblingData as { selectedCollection?: string })?.selectedCollection
+        },
+        hasMany: true,
+        relationTo: existingCollections,
       },
-      hasMany: true,
-      relationTo: existingCollections, 
-    },
-  ],
- }
+    ],
+  }
 }

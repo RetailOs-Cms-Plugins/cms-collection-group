@@ -1,5 +1,11 @@
 # @retailos-ai/plugin-template
 
+## 1.7.2
+
+### Patch Changes
+
+- 5546a21: versions update react
+
 ## 1.7.1
 
 ### Patch Changes

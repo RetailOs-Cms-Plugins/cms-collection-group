@@ -28,6 +28,7 @@ tests/**/*.d.ts
 # production
 /build
 /dist
+.npmrc
 
 # misc
 .DS_Store
